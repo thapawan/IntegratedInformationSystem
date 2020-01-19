@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="This application was build during the course &quot;Internship &quot;">
+  <meta name="author" content=" Pawan Thapa">
+  <!-- <link rel="icon" href="../../favicon.ico">-->
+   <title>Climate change and Land Information System</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font-Awesome -->
+    <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Flag Icons -->
+    <link href="lib/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+
+    <!-- Own CSS -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- Config -->
+    <script src="js/config.js"></script>
+
+
+    <!-- Language control-->
+    <script src="js/language.js"></script>
+
+    <!-- Cookie Notification-->
+    <link href="lib/cookieconsent2/build/dark-bottom.css" rel="stylesheet"/>
+    <script>
+        window.cookieconsent_options = {
+            learnMore: language[getCookieObject().language].help.cookie.more,
+            link: "help.html#_privacy",
+            theme: 'dark-bottom'
+        };
+    </script>
+    <script src="lib/cookieconsent2/build/cookieconsent.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><div id="mainTitle"><script>appendDiv('mainTitle','main.title')</script></div></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+              <li><a href="index.html"><div id="homeText"><i class="fa fa-home"></i>&nbsp;&nbsp;<script>appendDiv('homeText','navbar.home')</script></div></a></li>
+              <li><a href="map.html"><div id="mapText"><i class="fa fa-map-o"></i>&nbsp;&nbsp;<script>appendDiv('mapText','navbar.map')</script></div></a></li>
+              <li><a href="about.html"><div id="aboutText"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;<script>appendDiv('aboutText','navbar.about')</script></div></a></li>
+                <li ><a href="form.html"><div id="formText"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;<script>appendDiv('formText','navbar.form')</script></div></a></li>
+              <li class="active"><a href="license.html"><div id="licenseText"><i class="fa fa-key"></i>&nbsp;&nbsp;<script>appendDiv('licenseText','navbar.license')</script></div></a></li>
+          </ul>
+            <!--NAVBAR RIGHT -->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="help.html"><div id="helpText"><i class="fa fa-question-circle"></i>&nbsp;&nbsp;<script>appendDiv('helpText','navbar.help')</script></div></a></li>
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><div id="languageText"><i class="fa fa-cogs"></i>&nbsp;&nbsp;<script>appendDiv('languageText','navbar.language.title')</script></div></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="#" id="englishLanguageSwitcher">
+                                <div id="englishText"><span class="emoji" id="en_US">&#x1F1FA;&#x1F1F8;</span>&nbsp;&nbsp;</div><script>appendDiv('englishText','navbar.language.english')</script>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="germanLanguageSwitcher">
+                                <div id="germanText"><span class="emoji" id="de_DE">&#x1F1E9;&#x1F1EA;</span>&nbsp;&nbsp;</div><script>appendDiv('germanText','navbar.language.german')</script>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="nepaliLanguageSwitcher">
+                                <div id="nepaliText"><span class="emoji" id="ne_NP">&#x1F1F3;&#x1F1F5;</span>&nbsp;&nbsp;</div><script>appendDiv('nepaliText','navbar.language.nepali')</script>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<div class="container-fluid">
+
+    <div class="content">
+        <div id="licenseHTMLContent">
+            <script>appendDiv('licenseHTMLContent','license.heading')</script>
+            <script>appendDiv('licenseHTMLContent','license.software')</script>
+            <div class="row">
+                <div class="col-xs-1"></div>
+                <div class="col-xs-10" style="text-align: justify;">
+                    <div id="cc"><script>setDiv('cc','license.cc')</script></div>
+                    <div id="framework"><script>setDiv('framework','license.framework')</script></div>
+                    <div id="frameworks"><script>setDiv('frameworks','license.frameworks')</script></div>
+                </div>
+                <div class="col-xs-1"></div>
+            </div>
+            <script>appendDiv('licenseHTMLContent','license.data')</script>
+            <div class="row">
+                <div class="col-xs-1"></div>
+                <div class="col-xs-10" id="opendata" style="text-align: justify;"><script>setDiv('opendata','license.opendata')</script></div>
+                <div class="col-xs-1"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+        <h1 align="center">Licenses</h1>
+
+<div class="row"><div class="col-sm-2"><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"></a></div></span> The application is developed by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName"> Pawan Thapa </span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</div></div><br><br>
+ <ul>
+    <li >JQuery (<a href="https://github.com/jquery/jquery/blob/master/LICENSE.txt" target="_blank">License</a>)</li>
+    <li >JQuery-UI (<a href="https://github.com/jquery/jquery-ui/blob/master/LICENSE.txt" target="_blank">License</a>)</li>
+    <li >Leaflet (<a href="https://github.com/Leaflet/Leaflet/blob/master/LICENSE" target="_blank">License</a>)</li>
+    <li >Bootstrap (<a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">License</a>)</li>
+    <li >Mapbox (<a href="https://github.com/mapbox/mapbox.js/blob/mb-pages/LICENSE.md" target="_blank">License</a>)</li>
+    <li >Font-Awesome (<a href="https://github.com/FortAwesome/Font-Awesome" target="_blank">License</a>)</li>
+    <li >Flag-Icon (<a href="https://github.com/lipis/flag-icon-css/blob/master/LICENSE" target="_blank">License</a>)</li>
+    <li >'This application visualizes data about the climate change and land data of Dolakha districts, Nepal<a></a></li>
+  </ul>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/initGeneralFunctions.js"></script>
+
+
+</body>
+</html>

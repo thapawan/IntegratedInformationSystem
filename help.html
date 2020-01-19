@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <meta name="description" content="This application was build during the course &quot;Internship &quot;">
+    <meta name="author" content=" Pawan Thapa">
+    <!-- <link rel="icon" href="../../favicon.ico">-->
+    <title>Climate change and Land Information System</title>
+
+	 <!-- Bootstrap core CSS -->
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Font-Awesome -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Flag Icons -->
+    <link href="lib/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+
+	<!-- Own CSS -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- Config -->
+    <script src="js/config.js"></script>
+
+
+    <!-- Language control-->
+    <script src="js/language.js"></script>
+	 <!-- Cookie Notification-->
+    <link href="lib/cookieconsent2/build/dark-bottom.css" rel="stylesheet"/>
+    <script>
+        window.cookieconsent_options = {
+            learnMore: language[getCookieObject().language].help.cookie.more,
+            link: "help.html#_privacy",
+            theme: 'dark-bottom'
+        };
+    </script>
+    <script src="lib/cookieconsent2/build/cookieconsent.min.js"></script>
+
+	</head>
+	<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><div id="mainTitle"><script>appendDiv('mainTitle','main.title')</script></div></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+              <li><a href="index.html"><div id="homeText"><i class="fa fa-home"></i>&nbsp;&nbsp;<script>appendDiv('homeText','navbar.home')</script></div></a></li>
+              <li><a href="map.html"><div id="mapText"><i class="fa fa-map-o"></i>&nbsp;&nbsp;<script>appendDiv('mapText','navbar.map')</script></div></a></li>
+              <li><a href="about.html"><div id="aboutText"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;<script>appendDiv('aboutText','navbar.about')</script></div></a></li>
+              <li><a href="form.html"><div id="formText"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;<script>appendDiv('formText','navbar.form')</script></div></a></li>
+              <li><a href="license.html"><div id="licenseText"><i class="fa fa-key"></i>&nbsp;&nbsp;<script>appendDiv('licenseText','navbar.license')</script></div></a></li>
+          </ul>
+            <!--NAVBAR RIGHT -->
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="help.html"><div id="helpText"><i class="fa fa-question-circle"></i>&nbsp;&nbsp;<script>appendDiv('helpText','navbar.help')</script></div></a></li>
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><div id="languageText"><i class="fa fa-cogs"></i>&nbsp;&nbsp;<script>appendDiv('languageText','navbar.language.title')</script></div></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="#" id="englishLanguageSwitcher">
+                                <div id="englishText"><span class="emoji" id="en_US">&#x1F1FA;&#x1F1F8;</span>&nbsp;&nbsp;</div><script>appendDiv('englishText','navbar.language.english')</script>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="germanLanguageSwitcher">
+                                <div id="germanText"><span class="emoji" id="de_DE">&#x1F1E9;&#x1F1EA;</span>&nbsp;&nbsp;</div><script>appendDiv('germanText','navbar.language.german')</script>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="nepaliLanguageSwitcher">
+                                <div id="nepaliText"><span class="emoji" id="ne_NP">&#x1F1F3;&#x1F1F5;</span>&nbsp;&nbsp;</div><script>appendDiv('nepaliText','navbar.language.nepali')</script>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+
+    <div class="content">
+        <div id="helpHTMLContent">
+            <script>appendDiv('helpHTMLContent','help.heading')</script>
+            <script>appendDiv('helpHTMLContent','help.sub-heading')</script>
+        </div>
+    </div>
+
+<div class="help-content">
+        <div id="tableOfContents">
+            <ul>
+                <li>1. <a href="#_intro">परिचय</a></li>
+                <li>2. <a href="#_map">नक्सा</a></li>
+                <ul>
+                    <li>2.1. <a href="#_basics">मूल कुराहरु</a></li>
+                    <li>2.2. <a href="#_charts">मौसम विज्ञान स्टेशनहरु</a></li>
+                    <!--<li>2.3. <a href="#_info-panel">Information-Panel</a></li>-->
+                </ul>
+                <li>3. <a href="#_compare">तहहरू - बटन</a></li>
+                <ul>
+                    <li>3.1 <a href="#_compare_1">गाउँमा</a></li>
+                    <li>3.2 <a href="#_compare_2">भूमि प्रयोग</a></li>
+                    <li>3.3 <a href="#_compare_3">पार्सल</a></li>
+                    <li>3.4 <a href="#_compare_4">तापमान</a></li>
+                    <li>3.5 <a href="#_compare_5">वर्षा</a></li>
+                </ul>
+            </ul>
+        </div>
+        <hr>
+        <div id="intro">
+            <h3>1. परिचय</h3>
+            <p>यो वेब अनुप्रयोग को उद्देश्य नेपाल दोलखा  जिल्ला जलवायु परिवर्तन र भूमि डाटा दृष्टिगत छ ।</p>
+            <hr>
+        </div>
+        <div id="_map">
+            <h3>2. नक्सा</h3>
+            <p>यो भूमि र जलवायु परिवर्तन जानकारी दोलखा जिल्ला वेब नक्शा प्रदर्शित हुनेछ</p>
+
+            <h4>2.1 मूल कुराहरु</h4>
+            <p>यहाँ मुख्य कुरा हो</p>
+                <li>Zoom-In / Zoom-Out (जुम मा / जुम आउट)</li>
+                <li>Layers (तहहरू)</li>
+                <li>Data (डाटा)</li>
+              <!--  <li>Year-Slider</li>
+                <img src="img/slider.png" class="image-1">-->
+                <li>Legend (पौराणिक कथा)</li>
+
+				 <img src="img/legend.png" class="image-2">
+            <h4>2.2 मौसम विज्ञान स्टेशनहरु</h4>
+
+            <img src="img/start.png" class="image-3">
+
+      <!--      <h4>2.3 Information-Panel</h4>
+			<p> Information panel provide the general information about population data. It also link to external links to show more informations.</p>
+            <img src="img/info-panel.png" class="image-4">
+        </div>-->
+        <hr>
+        <div id="_compare">
+            <h3>3. तहहरू - बटन</h3>
+
+            <img src="img/compare.png" class="image-5">
+
+
+            <img src="img/charts.png" class="image-6">
+
+            <h4 id="_compare_1">3.1 गाउँमा</h4>
+
+			<p> Tयो वेब नक्शा दोलखा जिल्लाको विभिन्न गाउँमा प्रदर्शन गर्नेछ</p>
+			<img src="img/mainpopulation.png" class="image-7">
+            <h4 id="_compare_2">3.2 भूमि प्रयोग</h4>
+			<p>यो वेब नक्शा दोलखा जिल्लाको विभिन्न भूमि प्रयोग प्रदर्शन गर्नेछ</p>
+			<img src="img/entitled.png" class="image-8">
+            <h4 id="_compare_3">3.3 पार्सल</h4>
+			<p>यो वेब नक्शा दोलखा जिल्लाको विभिन्न पार्सल प्रदर्शन गर्नेछ </p>
+			<img src="img/male.png" class="image-9">
+            <h4 id="_compare_4">3.4 तापमान</h4>
+			<p>यो वेब नक्शा दोलखा जिल्लाको विभिन्न तापमान प्रदर्शन गर्नेछ </p>
+			<img src="img/female.png" class="image-10">
+            <h4 id="_compare_5">3.5 वर्षा</h4>
+			<p>Tयो वेब नक्शा दोलखा जिल्लाको विभिन्न वर्षा प्रदर्शन गर्नेछ </p>
+			<img src="img/mainpopulationage.png" class="image-11">
+        </div>
+        <div id="_privacy">
+
+            <h3 id="_privacy-header"></h3>
+            <script>appendDiv('_privacy-header','help.cookie.title')</script>
+            <div id="privacy-content"><script>setDiv('privacy-content','help.cookie.cookie-content')</script></div>
+            <br><br><br><br>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/initGeneralFunctions.js"></script>
+
+</body>
+</html>
